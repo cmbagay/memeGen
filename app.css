@@ -1,0 +1,75 @@
+body{
+    background-color: gray;
+}
+
+h1{
+    font-family: 'Comic Sans MS Bold', 'Comic Neue', cursive; 
+    font-size: 4vw;
+    text-align: center;
+}
+
+p{
+    font-family: 'Comic Sans MS Bold', 'Comic Neue', cursive;
+    font-size: 1em;
+    text-align: center;
+
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+input[type='submit']{
+    font-family: 'Comic Sans MS Bold', 'Comic Neue', cursive;
+    
+
+}
+
+#final-meme{
+    position: relative;
+    max-width: 300px;
+    max-height: 300px;
+    
+    margin: 100px,100px;
+}
+
+div img{
+    max-width: inherit;
+    margin: inherit;
+}
+
+#final-meme .topTxt{
+    position: absolute;
+    left: 15%;
+
+    font-family: Impact;
+    font-size: 1.5em;
+    text-align: center;
+
+    color: white;
+
+    /* text outline/stroke code from https://www.codesdope.com/blog/article/adding-outline-to-text-using-css/ */
+    text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000;
+}
+
+#final-meme .btmTxt{
+    position: absolute;
+    left: 15%;
+    top: 90%;
+    
+
+    font-family: Impact,'Arial Narrow Bold', sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+
+    color: white;
+
+    /* text outline/stroke code from https://www.codesdope.com/blog/article/adding-outline-to-text-using-css/ */
+    text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000;
+}
+
+#final-meme button{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+}
+
