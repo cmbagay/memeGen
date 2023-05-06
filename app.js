@@ -6,41 +6,46 @@ const bottomTxt = document.querySelector('input[name="bottom"]');
 
 const meme = document.querySelector('#final-meme');
 
-form.addEventListener('submit', function(e) {
+form.addEventListener('submit', function (e) {
 	e.preventDefault();
 
 	const top = topTxt.value;
 	const url = imgURL.value;
 	const btm = bottomTxt.value;
 
-	if(top == '' || url == '' || btm == ''){
+	if (top == '' || url == '' || btm == '') { //alert for empty fields
 		alert("Please fill out all text inputs");
 	}
 
-	else{
+	else { //make meme
+		const genMeme = document.createElement('div');
+		genMeme.setAttribute('id', 'generated')
+
 		//append top text
 		const memeTopTxt = makeTopTxt(top);
-		meme.appendChild(memeTopTxt);
-			
+		genMeme.appendChild(memeTopTxt);
+
 		//append img
 		const memeImg = makeImg(url);
-		meme.appendChild(memeImg);
-			
+		genMeme.appendChild(memeImg);
+
 		//append bottom text
 		const memeBtmTxt = makeBtmTxt(btm);
-		meme.appendChild(memeBtmTxt);
-					
+		genMeme.appendChild(memeBtmTxt);
+
 		//append remove button
 		const btn = document.createElement('button');
 		btn.innerText = 'x';
-		meme.appendChild(btn);
-					
+		genMeme.appendChild(btn);
+
+		meme.appendChild(genMeme);
+
 		form.reset();
 	}
 });
 
 function makeTopTxt(text) {
-	
+
 	const makeTop = document.createElement('div');
 	makeTop.innerText = text;
 	makeTop.className = 'topTxt';
@@ -49,7 +54,7 @@ function makeTopTxt(text) {
 }
 
 function makeBtmTxt(text) {
-	
+
 	const makeBtm = document.createElement('div');
 	makeBtm.innerText = text;
 	makeBtm.className = 'btmTxt';
@@ -58,7 +63,7 @@ function makeBtmTxt(text) {
 }
 
 function makeImg(url) {
-	
+
 	const makeImg = document.createElement('img');
 	makeImg.src = url;
 
@@ -66,11 +71,11 @@ function makeImg(url) {
 
 }
 
-meme.addEventListener('click', function(e) {
+
+meme.addEventListener('click', function (e) {
 	e.preventDefault();
 	if (e.target.tagName === 'BUTTON') {
 		e.target.parentElement.remove();
-		form.reset();
 	}
 })
 
