@@ -1,14 +1,14 @@
-body{
+body {
     background-color: gray;
 }
 
-h1{
-    font-family: 'Comic Sans MS Bold', 'Comic Neue', cursive; 
+h1 {
+    font-family: 'Comic Sans MS Bold', 'Comic Neue', cursive;
     font-size: 4vw;
     text-align: center;
 }
 
-p{
+p {
     font-family: 'Comic Sans MS Bold', 'Comic Neue', cursive;
     font-size: 1em;
     text-align: center;
@@ -18,30 +18,37 @@ p{
     margin: auto;
 }
 
-input[type='submit']{
+input[type='submit'] {
     font-family: 'Comic Sans MS Bold', 'Comic Neue', cursive;
-    
+
 
 }
 
-#final-meme{
+#generated {
     position: relative;
     max-width: 300px;
     max-height: 300px;
-    
-    margin: 100px,100px;
+
+    margin: 10px, 10px, 10px, 10px;
+
 }
 
-div img{
-    max-width: inherit;
-    margin: inherit;
+#generated img {
+    /* position: relative; */
+    max-width: 300px;
+    max-height: 300px;
+
+    margin: 10px, 10px, 10px, 10px;
 }
 
-#final-meme .topTxt{
+#generated .topTxt {
     position: absolute;
-    left: 15%;
+    max-width: 300px;
+    max-height: 300px;
+    /* left: 150px; */
 
-    font-family: Impact;
+
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
     font-size: 1.5em;
     text-align: center;
 
@@ -51,15 +58,15 @@ div img{
     text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000;
 }
 
-#final-meme .btmTxt{
+#generated .btmTxt {
     position: absolute;
-    left: 15%;
-    top: 90%;
-    
+    left: 50%;
+    bottom: 0%;
 
-    font-family: Impact,'Arial Narrow Bold', sans-serif;
+
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
     font-size: 1.5em;
-    text-align: center;
+    /* text-align: center; */
 
     color: white;
 
@@ -67,9 +74,8 @@ div img{
     text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000;
 }
 
-#final-meme button{
+#generated button {
     position: absolute;
     top: 0%;
     right: 0%;
 }
-
